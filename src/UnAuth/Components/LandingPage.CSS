@@ -1,0 +1,30 @@
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #1a1a1e 0%, #2d2d35 50%, #1f1f24 100%);
+  color: #f4f4f5;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+.landing-page__hero {
+  text-align: center;
+  max-width: 36rem;
+}
+
+.landing-page__title {
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.landing-page__subtitle {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #a1a1aa;
+}
