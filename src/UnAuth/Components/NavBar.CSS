@@ -1,0 +1,38 @@
+.nav-bar {
+  flex-shrink: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(26, 26, 30, 0.85);
+  backdrop-filter: blur(8px);
+}
+
+.nav-bar__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0.875rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.nav-bar__brand {
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: -0.02em;
+  color: #f4f4f5;
+}
+
+.nav-bar__links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-bar__link {
+  color: #a1a1aa;
+  text-decoration: none;
+  font-size: 0.875rem;
+}
+
+.nav-bar__link:hover {
+  color: #f4f4f5;
+}
