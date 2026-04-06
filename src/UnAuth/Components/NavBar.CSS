@@ -1,38 +1,123 @@
 .nav-bar {
   flex-shrink: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-  background: rgba(26, 26, 30, 0.85);
-  backdrop-filter: blur(8px);
+  background: #000000;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+  font-family: "Zilla Slab", "Roboto Slab", Georgia, "Times New Roman", serif;
 }
 
 .nav-bar__inner {
-  max-width: 80rem;
+  max-width: 90rem;
   margin: 0 auto;
-  padding: 0.875rem 1.5rem;
-  display: flex;
+  padding: 1rem clamp(1.25rem, 4vw, 3rem);
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
   align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
+  gap: 1rem 1.5rem;
 }
 
-.nav-bar__brand {
+.nav-bar__logo {
+  justify-self: start;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: #d4af37;
+}
+
+.nav-bar__logo-mark {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.nav-bar__logo-icon {
+  width: 2.25rem;
+  height: auto;
+  display: block;
+}
+
+.nav-bar__logo-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-size: 0.65rem;
   font-weight: 600;
-  font-size: 1rem;
-  letter-spacing: -0.02em;
-  color: #f4f4f5;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+.nav-bar__logo-line {
+  display: block;
 }
 
 .nav-bar__links {
+  justify-self: center;
   display: flex;
-  gap: 1.25rem;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.25rem);
 }
 
 .nav-bar__link {
-  color: #a1a1aa;
+  color: #ffffff;
   text-decoration: none;
-  font-size: 0.875rem;
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 0.25rem 0;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
 }
 
 .nav-bar__link:hover {
-  color: #f4f4f5;
+  color: #d4af37;
+}
+
+.nav-bar__link--active {
+  color: #d4af37;
+  border-bottom-color: #d4af37;
+}
+
+.nav-bar__cta {
+  justify-self: end;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: clamp(0.8rem, 1.1vw, 0.95rem);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.55rem 1.35rem;
+  border: 1px solid #d4af37;
+  background: transparent;
+  transition: color 0.15s ease, background-color 0.15s ease;
+  white-space: nowrap;
+}
+
+.nav-bar__cta:hover {
+  color: #000000;
+  background-color: #d4af37;
+}
+
+@media (max-width: 768px) {
+  .nav-bar__inner {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .nav-bar__logo {
+    justify-self: center;
+  }
+
+  .nav-bar__links {
+    justify-self: center;
+    order: 3;
+  }
+
+  .nav-bar__cta {
+    justify-self: center;
+    order: 2;
+  }
 }
